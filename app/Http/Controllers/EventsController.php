@@ -12,7 +12,7 @@ class EventsController extends Controller
     {
 
         //Fetch data according to the plan
-        $events = Event::all();
+        $events = Event::where('plan', $plan)->get();
         $response = [
             'events'=>$events
 

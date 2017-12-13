@@ -19,7 +19,11 @@ Route::get('events/{plan}/{date}', 'EventsController@getEventsByDate');
 
 Route::get('cart', 'CartController@getCart');
 
-Route::get('cart/{id}', 'CartController@addToCart');
+Route::post('cart/{id}', 'CartController@addToCart');
+
+Route::delete('cart/{id}', 'CartController@deleteEvent'); 
+
+Route::post('email', 'EmailController@sendEmail');
 
 
 
